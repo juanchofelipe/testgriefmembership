@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Apoyo Emocional</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#4a919e",
+            "secondary": "#f2f2f2",
+            "accent": "#ffffff",
+            "background-light": "#ffffff",
+            "background-dark": "#112121",
+            "text-light": "#374151",
+            "text-dark": "#f3f4f6",
+          },
+          fontFamily: {
+            "display": ["Montserrat", "sans-serif"],
+            "body": ["Lato", "sans-serif"],
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-body">
+<script src="main.js"></script>
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-solid border-secondary bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm px-10 py-3">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<svg fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"></path>
+</svg>
+</div>
+<h2 class="text-primary text-xl font-bold leading-tight tracking-[-0.015em] font-display">Apoyo Emocional</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-text-light dark:text-text-dark text-sm font-medium leading-normal" href="#">Inicio</a>
+<a class="text-text-light dark:text-text-dark text-sm font-medium leading-normal" href="#">Sobre Nosotros</a>
+<a class="text-text-light dark:text-text-dark text-sm font-medium leading-normal" href="#">Servicios</a>
+<a class="text-text-light dark:text-text-dark text-sm font-medium leading-normal" href="#">Recursos</a>
+<a class="text-text-light dark:text-text-dark text-sm font-medium leading-normal" href="#">Contacto</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-accent text-sm font-bold leading-normal tracking-[0.015em] font-display transition-transform hover:scale-105">
+<span class="truncate">Comienza</span>
+</button>
+</div>
+</header>
+<main class="flex flex-col">
+<div class="w-full">
+<div class="@container">
+<div class="@[480px]:p-0">
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 items-center justify-center p-4" data-alt="Un cielo tranquilo y sereno con nubes suaves" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCopaTuV1Jx6J5l4EwnOvogOK0ago7eq3VQNmqhUF5L0JDdvNlO57TXdsRlV4qyeSDgx0D5WQAUiDlHqXAn5LxvgXe6QCxeI0cB_k6a20rcwfkme3nw5Y6csRJ8xUpNste7yLZCtEQhEuhTY6-LFn6Q_AJz3qNn-fFOi6kU96pvXrZIrBOtezsNo7W4hpMkhwMw-HEa9Uv_dS3yJAe--rlbCo-Ce1sARKDgppKuzKgWW2TuOP94AMzX3ZZeWG5ppxVZFVnglTe7-SgJ");'>
+<div class="flex flex-col gap-4 text-center">
+<h1 class="text-accent text-4xl font-bold leading-tight tracking-tight @[480px]:text-5xl font-display">Encuentra tu camino hacia la sanación</h1>
+<h2 class="text-accent text-lg font-normal leading-normal @[480px]:text-xl">Apoyo emocional y guía a través de tu proceso de duelo. Estamos aquí para ti.</h2>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-accent text-base font-bold leading-normal tracking-[0.015em] font-display transition-transform hover:scale-105">
+<span class="truncate">Comienza tu camino</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<section class="py-16 px-4 md:px-10 bg-secondary dark:bg-background-dark" id="servicios">
+<div class="flex flex-col gap-10 @container">
+<div class="flex flex-col gap-4 text-center">
+<h2 class="text-text-light dark:text-text-dark tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px] mx-auto font-display">Nuestros Servicios</h2>
+<p class="text-text-light dark:text-text-dark text-base font-normal leading-normal max-w-[720px] mx-auto">Ofrecemos una variedad de servicios para apoyarte en tu momento de necesidad. Nuestro objetivo es proporcionar un espacio seguro y reconfortante para tu proceso de sanación.</p>
+</div>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-6 p-0">
+<div class="flex flex-1 gap-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-gray-800 p-6 flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl">person</span>
+<div class="flex flex-col gap-2">
+<h3 class="text-text-light dark:text-text-dark text-xl font-bold leading-tight font-display">Terapia Individual</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">Sesiones personalizadas uno a uno con nuestros terapeutas experimentados.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-gray-800 p-6 flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl">groups</span>
+<div class="flex flex-col gap-2">
+<h3 class="text-text-light dark:text-text-dark text-xl font-bold leading-tight font-display">Grupos de Apoyo</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">Conecta con otros que entienden por lo que estás pasando en un entorno grupal de apoyo.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-gray-800 p-6 flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl">auto_stories</span>
+<div class="flex flex-col gap-2">
+<h3 class="text-text-light dark:text-text-dark text-xl font-bold leading-tight font-display">Recursos de Autoayuda</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">Accede a una biblioteca de artículos, guías y meditaciones para ayudarte a tu propio ritmo.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 px-4 md:px-10" id="sobre-nosotros">
+<div class="flex flex-col md:flex-row items-center gap-10">
+<div class="w-full md:w-1/2">
+<img alt="Un equipo diverso y amigable sonriendo" class="rounded-lg shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNzoNjO40xGe_bzmwFOmZjU8iiPQYRCWNdjUSeimx4-EJ4tJ1hI4YERaqsZFk2hdvJNtSLA4Fjl-iHtJdKkzQStxlJ55A6Zo_57EzGuSc3x_1TKnk7MsD-XqzZDMZVcGOwubQh6MOa2WVwbFaMKCecAiWbzC_CQrgSxJJNJOK5CoeXXA7U7SkiPPubrBQ87RUNbh6U2xVyK2s1M1T3lxRa2X9aIvjtfeuEITW6ojmKk0joh-mHN9G57BGJANZTCoFHpZZVJgZJZld_"/>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 font-display">Sobre Nosotros</h2>
+<p class="text-text-light dark:text-text-dark text-base font-normal leading-relaxed">Nuestra misión es proporcionar un apoyo emocional compasivo y profesional a quienes navegan por las complejidades del duelo. Creemos en la creación de un entorno seguro y enriquecedor donde puedas encontrar fuerza, sanación y esperanza. Nuestro equipo está dedicado a empoderarte con las herramientas y recursos que necesitas para seguir adelante.</p>
+</div>
+</div>
+</section>
+<section class="py-16 px-4 md:px-10 bg-secondary dark:bg-background-dark" id="testimonios">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="text-text-light dark:text-text-dark text-3xl font-bold mb-8 font-display">Testimonios</h2>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="bg-background-light dark:bg-gray-800 p-6 rounded-lg shadow-md flex-1">
+<p class="text-text-light dark:text-text-dark italic mb-4">"Este servicio fue un salvavidas para mí. La compasión y la guía que recibí me ayudaron a navegar por el momento más oscuro de mi vida."</p>
+<p class="font-bold text-primary">- Ana G.</p>
+</div>
+<div class="bg-background-light dark:bg-gray-800 p-6 rounded-lg shadow-md flex-1">
+<p class="text-text-light dark:text-text-dark italic mb-4">"Los grupos de apoyo me hicieron sentir menos solo. Conectar con otros que realmente entendían mi dolor fue increíblemente sanador."</p>
+<p class="font-bold text-primary">- Carlos M.</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-gray-800 text-accent mt-auto">
+<div class="max-w-[960px] mx-auto py-8 px-4 md:px-10 flex flex-col md:flex-row justify-between items-center">
+<p class="text-sm">© 2024 Apoyo Emocional. Todos los derechos reservados.</p>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a class="text-accent hover:text-primary" href="#">Política de Privacidad</a>
+<a class="text-accent hover:text-primary" href="#">Términos de Servicio</a>
+<a class="text-accent hover:text-primary" href="#">Contacto</a>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+</div>
+</div>
+</body></html>

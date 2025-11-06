@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard de Psicóloga</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4A90E2",
+                        "background-light": "#F5F7FA",
+                        "background-dark": "#112121",
+                        "accent-green": "#50E3C2",
+                        "accent-orange": "#F5A623",
+                        "text-primary": "#4A4A4A",
+                        "text-secondary": "#9B9B9B",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-primary">
+<script src="main.js"></script>
+<div class="flex h-screen">
+<!-- SideNavBar -->
+<aside class="flex flex-col w-64 bg-white dark:bg-background-dark border-r border-gray-200 dark:border-gray-700">
+<div class="flex items-center gap-3 p-4 border-b border-gray-200 dark:border-gray-700">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Dra. Ana Pérez profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnzgpJsqJrc08RCXDuWUEB5IpIg_C1rRzmhyh1FIGt0V_xQ1wegl6OWoE_OdMOFgHdhdpWeHzd6cNOb13qYjs2uI_u711qNZXsKmH2XODD-7JeDqVwVsWz7FTrf4PRrateyFka5dZ5Ne4xWZRyxtndd5toiStMDQYtkY-aIZpzzJioj_rg4RsKyR2mdt8PyvWaxsLPNfO6fLWInuaoKSe9eIQg4l7Qfjd7DOaxN0kPHHawc-VAoWOFJ6TjIhbcCbPCGjSHkcWcpdzU");'></div>
+<div class="flex flex-col">
+<h1 class="text-text-primary dark:text-white text-base font-bold">Dra. Ana Pérez</h1>
+<p class="text-text-secondary dark:text-gray-400 text-sm">Psicóloga</p>
+</div>
+</div>
+<nav class="flex-grow p-4 space-y-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-sm font-medium">Miembros</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-text-primary dark:text-white" href="#">
+<span class="material-symbols-outlined">book_online</span>
+<span class="text-sm font-medium">Citas</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-text-primary dark:text-white" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-sm font-medium">Calendario</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-text-primary dark:text-white" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-sm font-medium">Notificaciones</span>
+</a>
+</nav>
+<div class="p-4 border-t border-gray-200 dark:border-gray-700">
+<a class="flex items-center gap-3 px-3 py-2 mb-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-text-primary dark:text-white" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-sm font-medium">Perfil</span>
+</a>
+<button class="w-full flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-red-500/10 text-red-500 hover:bg-red-500/20 text-sm font-bold">
+<span class="material-symbols-outlined">logout</span>
+<span class="truncate">Cerrar Sesión</span>
+</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+<div class="flex flex-col">
+<h1 class="text-4xl font-black tracking-tighter text-text-primary dark:text-white">Miembros</h1>
+<p class="text-base text-text-secondary dark:text-gray-400">Gestiona la información y perfiles de los miembros.</p>
+</div>
+<button class="flex items-center justify-center h-10 px-4 text-sm font-bold text-white rounded-lg bg-primary hover:bg-primary/90">
+<span class="material-symbols-outlined mr-2">person_add</span>
+<span class="truncate">Invitar Nuevo Miembro</span>
+</button>
+</div>
+<div class="mb-6">
+<label class="flex items-stretch w-full h-12">
+<div class="flex items-center justify-center pl-4 bg-white dark:bg-background-dark border border-r-0 border-gray-200 dark:border-gray-700 rounded-l-lg">
+<span class="material-symbols-outlined text-text-secondary dark:text-gray-400">search</span>
+</div>
+<input class="flex-1 w-full min-w-0 px-4 text-base bg-white dark:bg-background-dark border border-l-0 border-gray-200 dark:border-gray-700 rounded-r-lg form-input text-text-primary dark:text-white placeholder:text-text-secondary focus:ring-primary focus:border-primary" placeholder="Buscar miembro por nombre o correo electrónico" value=""/>
+</label>
+</div>
+<div class="overflow-hidden bg-white dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-lg">
+<table class="w-full">
+<thead class="bg-gray-50 dark:bg-gray-800">
+<tr>
+<th class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-text-secondary dark:text-gray-400">Nombre</th>
+<th class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-text-secondary dark:text-gray-400">Apellido</th>
+<th class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-text-secondary dark:text-gray-400">Correo Electrónico</th>
+<th class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-text-secondary dark:text-gray-400">Fecha de Registro</th>
+<th class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-text-secondary dark:text-gray-400">Acción</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-primary dark:text-white">Juan</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-secondary dark:text-gray-400">García</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-secondary dark:text-gray-400">juan.garcia@email.com</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-secondary dark:text-gray-400">2023-10-26</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+<a class="text-primary hover:text-primary/80" href="#">Ver Perfil</a>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-primary dark:text-white">María</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-secondary dark:text-gray-400">López</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-secondary dark:text-gray-400">maria.lopez@email.com</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-secondary dark:text-gray-400">2023-10-25</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+<a class="text-primary hover:text-primary/80" href="#">Ver Perfil</a>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-primary dark:text-white">Carlos</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-secondary dark:text-gray-400">Martínez</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-secondary dark:text-gray-400">carlos.martinez@email.com</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-secondary dark:text-gray-400">2023-10-24</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+<a class="text-primary hover:text-primary/80" href="#">Ver Perfil</a>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-primary dark:text-white">Laura</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-secondary dark:text-gray-400">Rodríguez</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-secondary dark:text-gray-400">laura.rodriguez@email.com</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-secondary dark:text-gray-400">2023-10-23</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+<a class="text-primary hover:text-primary/80" href="#">Ver Perfil</a>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-text-primary dark:text-white">Pedro</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-secondary dark:text-gray-400">Sánchez</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-secondary dark:text-gray-400">pedro.sanchez@email.com</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-secondary dark:text-gray-400">2023-10-22</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+<a class="text-primary hover:text-primary/80" href="#">Ver Perfil</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</main>
+<!-- Availability Calendar Panel -->
+<aside class="w-96 p-6 bg-white dark:bg-background-dark border-l border-gray-200 dark:border-gray-700 flex flex-col">
+<h2 class="text-xl font-bold tracking-tight text-text-primary dark:text-white mb-6">Calendario de Disponibilidad</h2>
+<!-- Mini Calendar -->
+<div class="mb-6">
+<div class="flex items-center justify-between mb-2">
+<button class="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined text-text-secondary">chevron_left</span>
+</button>
+<h3 class="font-medium text-text-primary dark:text-white">Noviembre 2023</h3>
+<button class="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center text-sm text-text-secondary dark:text-gray-400">
+<div>Lu</div><div>Ma</div><div>Mi</div><div>Ju</div><div>Vi</div><div>Sá</div><div>Do</div>
+</div>
+<div class="grid grid-cols-7 gap-1 mt-2 text-center text-sm">
+<div class="text-gray-400">29</div>
+<div class="text-gray-400">30</div>
+<div class="text-gray-400">31</div>
+<div>1</div><div>2</div><div>3</div><div>4</div>
+<div>5</div><div>6</div><div>7</div><div>8</div>
+<div class="relative"><span class="absolute w-1 h-1 -translate-x-1/2 bg-accent-orange rounded-full left-1/2 -bottom-1"></span>9</div>
+<div>10</div><div>11</div>
+<div>12</div><div>13</div><div>14</div><div>15</div>
+<div class="relative"><span class="absolute w-1 h-1 -translate-x-1/2 bg-primary rounded-full left-1/2 -bottom-1"></span>16</div>
+<div>17</div><div>18</div>
+<div class="relative"><span class="bg-primary/20 text-primary rounded-full p-1">19</span></div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div>
+<div>26</div><div>27</div><div>28</div><div>29</div><div>30</div>
+</div>
+</div>
+<!-- Availability Slots -->
+<div class="flex-grow space-y-4 overflow-y-auto">
+<h3 class="font-medium text-text-primary dark:text-white">Domingo, 19 de Noviembre</h3>
+<div class="flex items-center p-3 rounded-lg bg-gray-100 dark:bg-gray-800 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700">
+<p class="flex-1 text-sm text-text-primary dark:text-white">09:00 - 10:00</p>
+<span class="px-2 py-1 text-xs font-semibold rounded-full bg-accent-green/20 text-accent-green">Disponible</span>
+</div>
+<div class="flex items-center p-3 rounded-lg bg-gray-100 dark:bg-gray-800 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700">
+<p class="flex-1 text-sm text-text-primary dark:text-white">10:00 - 11:00</p>
+<span class="px-2 py-1 text-xs font-semibold rounded-full bg-gray-300 dark:bg-gray-600 text-text-secondary dark:text-gray-300">No Disponible</span>
+</div>
+<div class="flex items-center p-3 rounded-lg bg-gray-100 dark:bg-gray-800 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700">
+<p class="flex-1 text-sm text-text-primary dark:text-white">11:00 - 12:00</p>
+<span class="px-2 py-1 text-xs font-semibold rounded-full bg-accent-green/20 text-accent-green">Disponible</span>
+</div>
+<div class="flex items-center p-3 rounded-lg bg-gray-100 dark:bg-gray-800 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700">
+<p class="flex-1 text-sm text-text-primary dark:text-white">14:00 - 15:00</p>
+<span class="px-2 py-1 text-xs font-semibold rounded-full bg-accent-orange/20 text-accent-orange">Cita Pendiente</span>
+</div>
+</div>
+<div class="mt-auto pt-6">
+<button class="w-full flex items-center justify-center h-10 px-4 text-sm font-bold text-white rounded-lg bg-primary hover:bg-primary/90">
+                    Guardar Cambios
+                </button>
+</div>
+</aside>
+</div>
+</body></html>

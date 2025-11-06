@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Toma de Notas - Administración de Citas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#8CB3A9",
+            "background-light": "#F8F9FA",
+            "background-dark": "#112121",
+            "text-main": "#343A40",
+            "text-secondary": "#6c757d"
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main dark:text-background-light">
+<script src="main.js"></script>
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-700 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm px-10 py-3">
+<div class="flex items-center gap-4 text-text-main dark:text-background-light">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Administración de Citas</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9"></div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Imagen de perfil del psicólogo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB5tRyz86xl3mFGmme_RwtRZYTP6HfKIfhY8OA8ibaLYRDyFN6d8aZJgfH0gLM_N1bthPfmv0BS_xf9vTgkIPTcUh1K2T6Uhu33g68d2Y4xZ0Dz0BuNmHSJxIcZbWuIawip8Y6OTz_k9p9eazYyemjEyk-vixLDCX1RMTK4oSjv1RQ_GIlxXhSCF2ea5WuTKxPHQrp7tJZu9InLAT-LOTU-chDRH8lwBulD3JgYFljDuJqexDUmEj9YOfNSLjQ8hQr_iMGvHu3BT6Uf");'></div>
+</div>
+</header>
+<div class="flex flex-1">
+<aside class="w-80 border-r border-gray-200 dark:border-gray-700 bg-background-light dark:bg-background-dark p-6 flex flex-col justify-between">
+<div>
+<div class="flex flex-col items-center text-center gap-4 mb-8">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-24" data-alt="Avatar del paciente" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvU8_xz7oFCxa0426Ij6ud463HLledd_063G05IkWwd6DOhqi0VDMVRE57NjKAblf5IBRYjjgTyLaHo3dqp2BFhHcRAG2mg94rilC7MyC-pQJUiXWril7DUZQgJ98dyb7Pd_HKKeZM0g69opl2u5nByKoNuteSeK-7aDSEDxwSbFRfdRn_SrZFM3xBrnjDZshLSGOo5sHWTSt0IpV-c7jxlLh3T6_zx3ygrjhnz_3_2qDF4wQtFKZj5_Q0YQOfGDYgkMysi8RorYZM");'></div>
+<div class="flex flex-col">
+<h1 class="text-xl font-bold text-text-main dark:text-background-light">Nombre del Paciente</h1>
+<p class="text-sm font-normal text-text-secondary dark:text-gray-400">Sesión de seguimiento - 15/03/2023, 10:00 AM</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="px-3 text-sm font-semibold text-text-secondary dark:text-gray-400 uppercase tracking-wider">Historial de notas</h3>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 dark:bg-primary/30" href="#">
+<span class="material-symbols-outlined text-primary" style="font-size: 20px;">description</span>
+<p class="text-sm font-medium text-text-main dark:text-background-light">Nota del 15/03/2023</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined text-text-secondary dark:text-gray-400" style="font-size: 20px;">description</span>
+<p class="text-sm font-normal text-text-secondary dark:text-gray-400">Nota del 08/03/2023</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined text-text-secondary dark:text-gray-400" style="font-size: 20px;">description</span>
+<p class="text-sm font-normal text-text-secondary dark:text-gray-400">Nota del 01/03/2023</p>
+</a>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 px-4 py-2 mt-8 rounded-lg text-text-secondary dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 text-sm font-medium">
+<span class="material-symbols-outlined" style="font-size: 20px;">fullscreen</span>
+<span>Modo sin distracciones</span>
+</button>
+</aside>
+<main class="flex-1 p-10">
+<div class="flex flex-wrap justify-between items-start gap-4 mb-6">
+<div class="flex flex-col gap-1">
+<p class="text-3xl font-bold leading-tight tracking-tight text-text-main dark:text-background-light">Notas de la sesión - 15/03/2023</p>
+<p class="text-sm font-normal text-text-secondary dark:text-gray-400">Borrador - Guardado hace 2 minutos</p>
+</div>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-gray-700 text-text-main dark:text-background-light text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-300 dark:hover:bg-gray-600">
+<span class="truncate">Guardar Borrador</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90">
+<span class="truncate">Guardar y Finalizar</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark rounded-lg border border-gray-200 dark:border-gray-700">
+<div class="flex items-center p-2 border-b border-gray-200 dark:border-gray-700">
+<button class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"><span class="material-symbols-outlined text-text-secondary dark:text-gray-400" style="font-size: 20px;">format_bold</span></button>
+<button class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"><span class="material-symbols-outlined text-text-secondary dark:text-gray-400" style="font-size: 20px;">format_italic</span></button>
+<button class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"><span class="material-symbols-outlined text-text-secondary dark:text-gray-400" style="font-size: 20px;">format_underlined</span></button>
+<div class="h-6 w-px bg-gray-200 dark:bg-gray-700 mx-2"></div>
+<button class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"><span class="material-symbols-outlined text-text-secondary dark:text-gray-400" style="font-size: 20px;">format_list_bulleted</span></button>
+<button class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"><span class="material-symbols-outlined text-text-secondary dark:text-gray-400" style="font-size: 20px;">format_list_numbered</span></button>
+</div>
+<textarea class="form-input flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-b-lg text-text-main dark:text-background-light focus:outline-0 focus:ring-0 border-none bg-transparent min-h-[500px] placeholder:text-text-secondary/70 dark:placeholder:text-gray-500 p-6 text-base font-normal leading-relaxed" placeholder="Comienza a escribir aquí las notas de la sesión..."></textarea>
+</div>
+<div class="flex justify-end mt-6">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-transparent text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/10 gap-2">
+<span class="material-symbols-outlined" style="font-size: 20px;">picture_as_pdf</span>
+<span class="truncate">Exportar a PDF</span>
+</button>
+</div>
+</main>
+</div>
+</div>
+</body></html>

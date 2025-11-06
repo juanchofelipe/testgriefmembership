@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Perfil de Psicóloga</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8EAEBD",
+                        "secondary": "#F5F1E8",
+                        "accent": "#E8A99A",
+                        "text-dark": "#333333",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#112121",
+                    },
+                    fontFamily: {
+                        "display": ["Lora", "serif"],
+                        "body": ["Lato", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-body text-text-dark">
+<script src="main.js"></script>
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header -->
+<header class="px-4 md:px-10 lg:px-20 flex items-center justify-between whitespace-nowrap border-b border-solid border-secondary dark:border-gray-800 py-4">
+<div class="flex items-center gap-4 text-text-dark dark:text-white">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+<h2 class="text-xl font-bold font-display">Psicóloga Online</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end items-center gap-8">
+<nav class="flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Inicio</a>
+<a class="text-sm font-medium hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Recursos</a>
+<a class="text-sm font-medium hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Contacto</a>
+</nav>
+<button class="flex min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold tracking-wide hover:bg-opacity-90 transition-colors">
+<span class="truncate">Agendar Cita</span>
+</button>
+</div>
+<button class="md:hidden flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined text-text-dark dark:text-white">menu</span>
+</button>
+</header>
+<main class="flex-1">
+<div class="px-4 md:px-10 lg:px-20 py-10 md:py-16">
+<div class="max-w-5xl mx-auto">
+<!-- Hero Section -->
+<section class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+<div class="flex-1">
+<h1 class="font-display text-4xl md:text-5xl font-bold text-text-dark dark:text-white leading-tight">Acompañándote en tu Duelo</h1>
+<p class="mt-4 text-lg text-gray-600 dark:text-gray-400 font-body">Encuentra un espacio seguro para sanar y crecer. Estoy aquí para guiarte en cada paso del camino con empatía, profesionalismo y un enfoque centrado en ti.</p>
+<button class="mt-8 flex min-w-[150px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide hover:bg-opacity-90 transition-colors">
+<span class="truncate">Agenda una Cita</span>
+</button>
+</div>
+<div class="flex-1 w-full md:w-auto mt-8 md:mt-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl w-full max-w-sm mx-auto" data-alt="Fotografía profesional de la psicóloga sonriendo cálidamente." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTpcGvR0Z0TyE2hglK8sJpA8bCZS7dtrSkenuWetVJ8OI-MI2mhHgwTYr9wavJJS9rOGrDFnmVetjNdOXaNw3UNNt-q0NL8j19Ul4iFep37HtBh7Nl8WC4MWTRWl21ikjx176TC3HfgBxdInYFGeNaMLIhSx_qIn2DUYdBg6kxaRuhpDO3oz5G-bV1hZJoMCDZqghyuHfvtU4hzrS1UkNI3O1KSK0v-0g4sMXW1fi6-36dRXfkir2rLZm5bqkizWKB32oqro_tBbWo")'></div>
+</div>
+</section>
+<!-- Profile Header -->
+<section class="mt-16 md:mt-24 p-6 md:p-8 bg-secondary dark:bg-background-dark dark:border dark:border-gray-800 rounded-xl flex flex-col sm:flex-row items-center gap-6">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-24 md:size-32 flex-shrink-0" data-alt="Fotografía de perfil de la psicóloga." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCj8B9nnxrqsXct4bhjFFRTAcXRWFV4KX8qSO1Y7eXY8Pw59Bgk1J-56dCeVJnbiyUA__biZlbRnLtCt9kV6XgmreZkEy-N1_hZJ7nWQ2bvE1DWJUWAbuX4Fd4d3Z5MEiqOW-TY3WObHyXN-oKP4-1cGlI03x44mTtX4ToAqGYioZvLdscDLaZbQ-Ox7q8Iw32wG1_F276umg852CoX_KKWfE-oEwpEXD0MpBoCeYq81UHI5WZxx3Sob935p71btqVsv-90r1DuElcC")'></div>
+<div class="text-center sm:text-left">
+<p class="font-display text-2xl font-bold text-text-dark dark:text-white">Dra. Anaïs García</p>
+<p class="mt-1 text-base text-gray-600 dark:text-gray-400 font-body">Psicóloga especialista en Duelo</p>
+<p class="mt-1 text-sm text-gray-500 dark:text-gray-500 font-body">Colegiada N° 12345</p>
+</div>
+</section>
+<!-- About Me Section -->
+<section class="mt-16 md:mt-24">
+<h2 class="font-display text-3xl font-bold text-text-dark dark:text-white">Sobre Mí</h2>
+<p class="mt-4 text-base text-gray-600 dark:text-gray-400 font-body leading-relaxed">
+                                Creo firmemente en el poder de la conexión humana para sanar las heridas más profundas. Mi enfoque terapéutico se basa en la empatía, la escucha activa y la creación de un espacio seguro donde puedas explorar tus emociones sin juicios. Mi misión es acompañarte en tu proceso de duelo, brindándote herramientas para transitar el dolor y redescubrir la esperanza.
+                            </p>
+</section>
+<!-- Credentials Section -->
+<section class="mt-16 md:mt-24">
+<h2 class="font-display text-3xl font-bold text-text-dark dark:text-white text-center">Mis Credenciales</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
+<div class="bg-white dark:bg-gray-800/50 p-6 rounded-lg text-center border border-gray-200 dark:border-gray-700/50">
+<span class="material-symbols-outlined text-4xl text-primary mx-auto">school</span>
+<h3 class="font-display text-lg font-bold mt-4 text-text-dark dark:text-white">Formación Académica</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Máster en Psicoterapia Humanista Integrativa. Universidad de Salamanca.</p>
+</div>
+<div class="bg-white dark:bg-gray-800/50 p-6 rounded-lg text-center border border-gray-200 dark:border-gray-700/50">
+<span class="material-symbols-outlined text-4xl text-primary mx-auto">workspace_premium</span>
+<h3 class="font-display text-lg font-bold mt-4 text-text-dark dark:text-white">Certificaciones</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Experto en Terapia de Duelo y Pérdidas. Colegio Oficial de Psicólogos.</p>
+</div>
+<div class="bg-white dark:bg-gray-800/50 p-6 rounded-lg text-center border border-gray-200 dark:border-gray-700/50">
+<span class="material-symbols-outlined text-4xl text-primary mx-auto">trending_up</span>
+<h3 class="font-display text-lg font-bold mt-4 text-text-dark dark:text-white">Años de Experiencia</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Más de 10 años acompañando a personas en sus procesos de sanación.</p>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="mt-16 md:mt-24">
+<h2 class="font-display text-3xl font-bold text-text-dark dark:text-white text-center">Lo que dicen mis pacientes</h2>
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-secondary dark:bg-background-dark dark:border dark:border-gray-800 p-6 rounded-lg">
+<p class="text-gray-600 dark:text-gray-400 font-body italic">"Anaïs me proporcionó un espacio seguro para llorar y recordar. Su calidez y profesionalismo fueron clave en mi proceso. Eternamente agradecida."</p>
+<p class="font-bold text-text-dark dark:text-white mt-4">- Laura M.</p>
+</div>
+<div class="bg-secondary dark:bg-background-dark dark:border dark:border-gray-800 p-6 rounded-lg">
+<p class="text-gray-600 dark:text-gray-400 font-body italic">"Gracias a su guía, pude transformar mi dolor en un aprendizaje. Me sentí comprendido y apoyado en todo momento."</p>
+<p class="font-bold text-text-dark dark:text-white mt-4">- Carlos G.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-16 md:mt-24 text-center bg-primary/20 dark:bg-primary/10 p-10 rounded-xl">
+<h2 class="font-display text-3xl font-bold text-text-dark dark:text-white">¿Listo para dar el primer paso?</h2>
+<p class="mt-3 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Permíteme acompañarte en este viaje. Agenda una primera sesión para conocernos y explorar cómo puedo ayudarte a encontrar la paz y la serenidad que mereces.</p>
+<button class="mt-8 flex mx-auto min-w-[200px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent text-white text-base font-bold tracking-wide hover:bg-opacity-90 transition-colors">
+<span class="truncate">Solicitar Información</span>
+</button>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-secondary dark:bg-gray-900/50 mt-16">
+<div class="max-w-5xl mx-auto px-4 md:px-10 lg:px-20 py-8">
+<div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+<p class="text-sm text-gray-600 dark:text-gray-400">© 2024 Psicóloga Online. Todos los derechos reservados.</p>
+<div class="flex items-center gap-4">
+<a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">LinkedIn</a>
+<a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Política de Privacidad</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

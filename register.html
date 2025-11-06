@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Registro y Suscripción</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#5A8A94",
+              "background-light": "#F4F7F6",
+              "background-dark": "#112121",
+              "accent": "#E6C5BE",
+              "text-primary": "#333333",
+              "text-secondary": "#638888",
+              "border-color": "#dce5e5",
+              "error": "#E57373"
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-primary">
+<script src="main.js"></script>
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-color px-6 md:px-10 lg:px-20 py-4 bg-white dark:bg-background-dark dark:border-gray-700">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 17.4264C16.7203 18.1174 20.2244 18.5217 24 18.5217C27.7756 18.5217 31.2797 18.1174 34.1739 17.4264C36.9144 16.7722 39.9967 15.2331 41.3563 14.1648L24.8486 40.6391C24.4571 41.267 23.5429 41.267 23.1514 40.6391L6.64374 14.1648C8.00331 15.2331 11.0856 16.7722 13.8261 17.4264Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M39.998 12.236C39.9944 12.2537 39.9875 12.2845 39.9748 12.3294C39.9436 12.4399 39.8949 12.5741 39.8346 12.7175C39.8168 12.7597 39.7989 12.8007 39.7813 12.8398C38.5103 13.7113 35.9788 14.9393 33.7095 15.4811C30.9875 16.131 27.6413 16.5217 24 16.5217C20.3587 16.5217 17.0125 16.131 14.2905 15.4811C12.0012 14.9346 9.44505 13.6897 8.18538 12.8168C8.17384 12.7925 8.16216 12.767 8.15052 12.7408C8.09919 12.6249 8.05721 12.5114 8.02977 12.411C8.00356 12.3152 8.00039 12.2667 8.00004 12.2612C8.00004 12.261 8 12.2607 8.00004 12.2612C8.00004 12.2359 8.0104 11.9233 8.68485 11.3686C9.34546 10.8254 10.4222 10.2469 11.9291 9.72276C14.9242 8.68098 19.1919 8 24 8C28.8081 8 33.0758 8.68098 36.0709 9.72276C37.5778 10.2469 38.6545 10.8254 39.3151 11.3686C39.9006 11.8501 39.9857 12.1489 39.998 12.236ZM4.95178 15.2312L21.4543 41.6973C22.6288 43.5809 25.3712 43.5809 26.5457 41.6973L43.0534 15.223C43.0709 15.1948 43.0878 15.1662 43.104 15.1371L41.3563 14.1648C43.104 15.1371 43.1038 15.1374 43.104 15.1371L43.1051 15.135L43.1065 15.1325L43.1101 15.1261L43.1199 15.1082C43.1276 15.094 43.1377 15.0754 43.1497 15.0527C43.1738 15.0075 43.2062 14.9455 43.244 14.8701C43.319 14.7208 43.4196 14.511 43.5217 14.2683C43.6901 13.8679 44 13.0689 44 12.2609C44 10.5573 43.003 9.22254 41.8558 8.2791C40.6947 7.32427 39.1354 6.55361 37.385 5.94477C33.8654 4.72057 29.133 4 24 4C18.867 4 14.1346 4.72057 10.615 5.94478C8.86463 6.55361 7.30529 7.32428 6.14419 8.27911C4.99695 9.22255 3.99999 10.5573 3.99999 12.2609C3.99999 13.1275 4.29264 13.9078 4.49321 14.3607C4.60375 14.6102 4.71348 14.8196 4.79687 14.9689C4.83898 15.0444 4.87547 15.1065 4.9035 15.1529C4.91754 15.1762 4.92954 15.1957 4.93916 15.2111L4.94662 15.223L4.95178 15.2312ZM35.9868 18.996L24 38.22L12.0131 18.996C12.4661 19.1391 12.9179 19.2658 13.3617 19.3718C16.4281 20.1039 20.0901 20.5217 24 20.5217C27.9099 20.5217 31.5719 20.1039 34.6383 19.3718C35.082 19.2658 35.5339 19.1391 35.9868 18.996Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold tracking-[-0.015em] dark:text-white">SerenePath</h2>
+</div>
+<a class="text-primary text-sm font-bold tracking-[0.015em] hover:underline" href="#">Iniciar Sesión</a>
+</header>
+<main class="flex-grow w-full max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-10">
+<p class="text-4xl font-black leading-tight tracking-[-0.033em] dark:text-white">Crea tu cuenta para comenzar tu camino</p>
+<p class="text-text-secondary text-base font-normal leading-normal dark:text-gray-300">Únete a nuestra comunidad de apoyo</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Registration Form -->
+<div class="bg-white dark:bg-background-dark p-8 rounded-xl shadow-md">
+<h2 class="text-2xl font-bold leading-tight tracking-[-0.015em] mb-6 dark:text-white">Datos de tu cuenta</h2>
+<div class="space-y-6">
+<div class="flex flex-col sm:flex-row gap-4">
+<label class="flex flex-col flex-1">
+<p class="text-base font-medium pb-2 dark:text-gray-200">Nombre</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-primary dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-color bg-background-light dark:bg-gray-700 dark:border-gray-600 focus:border-primary h-14 placeholder:text-text-secondary p-[15px] text-base font-normal" placeholder="Ingresa tu nombre" value=""/>
+</label>
+<label class="flex flex-col flex-1">
+<p class="text-base font-medium pb-2 dark:text-gray-200">Apellido</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-primary dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-color bg-background-light dark:bg-gray-700 dark:border-gray-600 focus:border-primary h-14 placeholder:text-text-secondary p-[15px] text-base font-normal" placeholder="Ingresa tu apellido" value=""/>
+</label>
+</div>
+<label class="flex flex-col">
+<p class="text-base font-medium pb-2 dark:text-gray-200">Correo Electrónico</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-primary dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-color bg-background-light dark:bg-gray-700 dark:border-gray-600 focus:border-primary h-14 placeholder:text-text-secondary p-[15px] text-base font-normal" placeholder="tu@email.com" type="email" value=""/>
+</label>
+<label class="flex flex-col">
+<p class="text-base font-medium pb-2 dark:text-gray-200">Contraseña</p>
+<div class="relative">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-primary dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-color bg-background-light dark:bg-gray-700 dark:border-gray-600 focus:border-primary h-14 placeholder:text-text-secondary p-[15px] text-base font-normal pr-12" placeholder="Crea una contraseña segura" type="password" value=""/>
+<button class="absolute inset-y-0 right-0 flex items-center px-4 text-text-secondary">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</label>
+<div class="flex items-start">
+<input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary mt-1" id="terms" type="checkbox"/>
+<label class="ml-3 text-sm text-text-secondary dark:text-gray-300" for="terms">
+                                Acepto los <a class="font-medium text-primary hover:underline" href="#">Términos y Condiciones</a> y la <a class="font-medium text-primary hover:underline" href="#">Política de Privacidad</a>.
+                            </label>
+</div>
+<button class="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-sm font-bold hover:opacity-90 transition-opacity">Crear Cuenta y Continuar</button>
+</div>
+</div>
+<!-- Subscription and Payment -->
+<div class="space-y-8">
+<!-- Plan Selection -->
+<div class="bg-white dark:bg-background-dark p-8 rounded-xl shadow-md">
+<h2 class="text-2xl font-bold leading-tight tracking-[-0.015em] mb-6 dark:text-white">Elige tu plan de suscripción</h2>
+<div class="space-y-4">
+<div class="relative border-2 border-border-color dark:border-gray-600 rounded-lg p-4 cursor-pointer hover:border-primary">
+<input class="absolute top-4 right-4 h-5 w-5 text-primary focus:ring-primary" id="monthly" name="plan" type="radio"/>
+<label class="block" for="monthly">
+<h3 class="font-bold dark:text-white">Mensual</h3>
+<p class="text-2xl font-bold dark:text-white">$19<span class="text-base font-normal text-text-secondary">/mes</span></p>
+<ul class="mt-2 text-sm text-text-secondary dark:text-gray-300 list-disc list-inside space-y-1">
+<li>Acceso ilimitado a recursos</li>
+<li>Soporte 24/7</li>
+</ul>
+</label>
+</div>
+<div class="relative border-2 border-primary rounded-lg p-4 cursor-pointer">
+<span class="absolute top-0 right-4 -mt-3 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">Recomendado</span>
+<input checked="" class="absolute top-4 right-4 h-5 w-5 text-primary focus:ring-primary" id="yearly" name="plan" type="radio"/>
+<label class="block" for="yearly">
+<h3 class="font-bold dark:text-white">Anual</h3>
+<p class="text-2xl font-bold dark:text-white">$180<span class="text-base font-normal text-text-secondary">/año</span></p>
+<ul class="mt-2 text-sm text-text-secondary dark:text-gray-300 list-disc list-inside space-y-1">
+<li>Acceso ilimitado a recursos</li>
+<li>Sesiones semanales</li>
+<li>Soporte prioritario 24/7</li>
+<li>Ahorra un 20%</li>
+</ul>
+</label>
+</div>
+</div>
+</div>
+<!-- Payment Form -->
+<div class="bg-white dark:bg-background-dark p-8 rounded-xl shadow-md">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-2xl font-bold leading-tight tracking-[-0.015em] dark:text-white">Información de Pago Segura</h2>
+<div class="flex items-center gap-2 text-text-secondary dark:text-gray-300">
+<span class="material-symbols-outlined text-lg">lock</span>
+<span class="text-sm">Pago 100% seguro</span>
+</div>
+</div>
+<div class="space-y-6">
+<label class="flex flex-col">
+<p class="text-base font-medium pb-2 dark:text-gray-200">Nombre en la tarjeta</p>
+<input class="form-input flex w-full rounded-lg text-text-primary dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-color bg-background-light dark:bg-gray-700 dark:border-gray-600 focus:border-primary h-14 placeholder:text-text-secondary p-[15px] text-base font-normal" placeholder="John Doe" value=""/>
+</label>
+<label class="flex flex-col">
+<p class="text-base font-medium pb-2 dark:text-gray-200">Número de la tarjeta</p>
+<div class="relative">
+<input class="form-input flex w-full rounded-lg text-text-primary dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-color bg-background-light dark:bg-gray-700 dark:border-gray-600 focus:border-primary h-14 placeholder:text-text-secondary p-[15px] text-base font-normal pr-24" placeholder="•••• •••• •••• ••••" value=""/>
+<div class="absolute inset-y-0 right-0 flex items-center px-3 space-x-1">
+<img class="h-6" data-alt="Visa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhdcFi4lhrMzBKuBHKIpHGecReauiybUO7jpH-KleOsx2lIWZErPA2BVa-IsqlzpyeV-coEi_iMWVEmWNwZk6eeNyF8LiLf6bWzHlWT5L_srerqpRz0zV5l9lRjAOvfOGOG1k8a5C3JCaDwiZp6VoGOhtfIOjT2gE2l2FS0htZGDxNbBlEmRMFmyBLZakJBTPeC1M-du0JE9CYTySEWWc8t08DziunjslUklSYaYkMpRep4thIOCVIlX19CN_nsuFymmpFsOW9Q4KI"/>
+<img class="h-6" data-alt="Mastercard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQRN2snyGnGvMLjie2a2tHqq6vif6Ds8mzWlFvJ9gueFjNS-nsg6PWkdhcBUIZFycK8cYY_46gcZRXZU_KyWxACkQcCMZso5bhYKUe2UyG9vmL6IMyPUBGo44NMsqpsCOfXJEWH5jVACUZjd9y1pVpDRH8_npcUuR7FgFv7avCVXnfgZy-_x0XAu3TL2lQgkLtKbi5ePckkH-msXJeHSyYwMlsV5y34mR8arW9k5-HLGLemS-gn744y40zlEPSqjcR1YcorWm-jckJ"/>
+</div>
+</div>
+</label>
+<div class="flex flex-col sm:flex-row gap-4">
+<label class="flex flex-col flex-1">
+<p class="text-base font-medium pb-2 dark:text-gray-200">Fecha de Vencimiento</p>
+<input class="form-input flex w-full rounded-lg text-text-primary dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-color bg-background-light dark:bg-gray-700 dark:border-gray-600 focus:border-primary h-14 placeholder:text-text-secondary p-[15px] text-base font-normal" placeholder="MM / AA" value=""/>
+</label>
+<label class="flex flex-col flex-1">
+<p class="text-base font-medium pb-2 dark:text-gray-200">CVC</p>
+<input class="form-input flex w-full rounded-lg text-text-primary dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-color bg-background-light dark:bg-gray-700 dark:border-gray-600 focus:border-primary h-14 placeholder:text-text-secondary p-[15px] text-base font-normal" placeholder="•••" value=""/>
+</label>
+</div>
+<div class="bg-background-light dark:bg-gray-700 p-4 rounded-lg flex justify-between items-center">
+<div>
+<p class="font-semibold dark:text-white">Plan Anual</p>
+<a class="text-sm text-primary hover:underline" href="#">Cambiar plan</a>
+</div>
+<p class="text-xl font-bold dark:text-white">$180.00</p>
+</div>
+<button class="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-sm font-bold hover:opacity-90 transition-opacity">Suscribirse y Pagar</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full border-t border-solid border-border-color dark:border-gray-700 mt-12">
+<div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-text-secondary dark:text-gray-400">
+<div class="flex justify-center gap-6 mb-4">
+<a class="hover:text-primary" href="#">Contacto</a>
+<a class="hover:text-primary" href="#">FAQ</a>
+<a class="hover:text-primary" href="#">Facebook</a>
+<a class="hover:text-primary" href="#">Instagram</a>
+</div>
+<p class="text-sm">© 2024 SerenePath. Todos los derechos reservados.</p>
+</div>
+</footer>
+</div>
+</body></html>
