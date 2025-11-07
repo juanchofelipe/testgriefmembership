@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
         viewProfileLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
-                window.location.href = 'psychologist-profile.html';
+                window.location.href = 'session-notes.html';
             });
         });
 
@@ -130,15 +130,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Screen 5: Registration Page
     if (document.title.includes('Registro y Suscripción')) {
-        const actionButtons = document.querySelectorAll('button.w-full');
-        actionButtons.forEach(button => {
-            const buttonText = button.textContent.trim();
-            if (buttonText === 'Crear Cuenta y Continuar' || buttonText === 'Suscribirse y Pagar') {
-                button.addEventListener('click', () => {
-                    window.location.href = 'user-dashboard.html';
-                });
-            }
-        });
+        const step1 = document.getElementById('step-1');
+        const step2 = document.getElementById('step-2');
+        const nextButton = document.getElementById('next-step-btn');
+        const subscribeButton = document.querySelector('#step-2 button.w-full');
+        const mainTitle = document.querySelector('.text-center.mb-10 .text-4xl');
+        const subTitle = document.querySelector('.text-center.mb-10 .text-base');
+
+        if (nextButton) {
+            nextButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                step1.style.display = 'none';
+                step2.style.display = 'block';
+                mainTitle.textContent = 'Elige tu plan y método de pago';
+                subTitle.textContent = 'Ya casi terminas. Elige el plan que mejor se adapte a tus necesidades.';
+                window.scrollTo(0, 0);
+            });
+        }
+
+        if (subscribeButton) {
+            subscribeButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.location.href = 'user-dashboard.html';
+            });
+        }
 
         const loginLink = document.querySelector('header a');
         if (loginLink) {
@@ -177,7 +192,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (loginButton) {
             loginButton.addEventListener('click', () => {
                 const email = document.querySelector('input[type="email"]').value;
-                if (email === 'admin@example.com') {
+                const password = document.querySelector('input[type="password"]').value;
+                if (email === 'admin' && password === 'admin') {
                     window.location.href = 'admin-dashboard.html';
                 } else {
                     window.location.href = 'user-dashboard.html';
